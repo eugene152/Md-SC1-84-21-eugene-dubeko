@@ -6,5 +6,120 @@
    <title>document</title>
  </head>
  <body>
-  
+    <h1>Заполните анкету</h1>
+
+    <form action="http://fe.it-academy.by/TestForm.php" name="personal_data" method="post">
+        <fieldset> <legend>Личные данные</legend>
+        <input type="text" name="surname" pattern="[А-Яа-я]{1,25}" placeholder="Фамилия" maxlength="25" required autofocus>
+        "text": Только кирилица, без пробелов, длина поля 25, обязательное поле, автофокус на данном поле"
+        <br>
+        <input type="text" name="name" pattern="[А-Яа-яЁё]{1,20}" placeholder="Имя" maxlength="20" required>
+        "text": Только кирилица, без пробелов, длина поля 20, обязательное поле,"
+        <br>
+        <input type="text" name="patronymic" pattern="[А-Яа-яЁё]{1,24}" placeholder="Отчество" maxlength="20" required>
+        "text": Только кирилица, без пробелов, длина поля 20, обязательное поле,"
+        <fieldset> <legend>Паспортные данные</legend>
+        "text: Серия - только заглавные две латинские буквы с длинной 2 и максимальным количеством символов 2, оличесьтво букв не менее 2,<br>
+        обязательное поле"<br>
+        "text: Номер паспорта  - только две цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле<br>
+        <input type="text" name="serial"  pattern="[A-Z]{2}" placeholder="AA" maxlength="2"required>
+        7<input type="text" name="series_number"  pattern="[0-9]{7}" placeholder="1234567" maxlength="7" required>
+        </fieldset>
+    
+    <fieldset> <legend>Дата рождения</legend>
+        <input type="text" name="year" pattern="[0-9]{4}" placeholder="2000">
+        " Год рождения4-е цифры
+        <br>
+        <select name="month">
+            <option value="1">январь</option>
+            <option value="2">февраль</option>
+            <option value="3">март</option>
+            <option value="4">апрель</option>
+            <option value="5">май</option>
+            <option value="6">июнь</option>
+            <option value="7">июль</option>
+            <option value="8">август</option>
+            <option value="9">сентябрь</option>
+            <option value="10">октябрь</option>
+            <option value="11">ноябрь</option>
+            <option value="12">декабрь</option>
+        </select>
+        " месяц рождения"
+        <br>
+        <input type="number" min="1" max="31"  step="1"><br>
+        </fieldset>
+        <select name="list">
+        <option value="1">РБ</option>
+        <option value="2">РФ</option>
+        <option value="3">Укр</option>  
+        </select>
+        <fieldset> <legend>Интересы</legend>
+        <fieldset> <legend>Хобби</legend>
+                <label>                                                                 <!--без id пока-->
+                <input type="checkbox" name="hobby[]"> Рыбалка
+                </label><br>
+                <label>
+                 <input type="checkbox" name="hobby[]"> Астрономия
+                 </label><br>
+                <label>
+                <input type="checkbox" name="hobby[]"> Дайвинг
+                </label><br>
+                <label>
+                <input type="checkbox" name="hobby[]"> Марки
+                 </label><br>
+        </fieldset>
+        <fieldset> <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+            <select name="list_of_pets" multiple size="4">
+            <optgroup label="Попугаи">
+                <option value="1">Волнистый</option>
+                <option value="2">Ара</option>
+                <option value="3">Неразлучник</option>
+            </optgroup>
+            <optgroup label="Рыба">
+                <option value="4">Караси</option>
+                <option value="5">Окуни</option>
+                <option value="6">Осётр</option>
+            </optgroup>
+            <optgroup label="Птицы">
+                <option value="7">Стая ворон</option>
+                <option value="8">Аист</option>
+                <option value="9">Археоптерикс</option>
+            </optgroup>
+            <optgroup label="Коты">
+                <option value="10">Британские</option>
+                <option value="11">Египетские</option>
+                <option value="12">Безпородные</option>
+            </optgroup>
+            </select>
+        </fieldset>
+        <fieldset> <legend>Данные для входа и восстановления пароля</legend>
+            <input type="text" name="login" pattern="[A-Z]{5,}" size="20" placeholder="login" autocomplete="off" required>
+            Только латиница, без пробелов, не менее 5 символов, длина поля 20, обязательное поле
+        <br>
+            <input type="password" name="password" pattern="[A-Z]{10,}" size="20"placeholder="password" autocomplete="off" required disabled>
+            Только латиница, без пробелов, не менее 10 символов, длина поля 20, обязательное поле, отключить
+        </fieldset>       
+        <fieldset> <legend>координаты</legend>
+        <input type="email" name=“email” placeholder="введите адрес электронной почты" utocomplete="off" required>
+        <br>
+        <input type="email" name=“url” placeholder="введите адрес сайта" utocomplete="off" required> 
+        </fieldset> 
+        <fieldset> <legend>Цифры</legend>
+        <input type="number" min="-2.5" max="2.5" step="0.1"> 
+        Диапазон от-2.5 до 2.5 с шагом 0.1
+        <br>
+        <input type="range" min="1" max="10"> 
+        Максимальное 10 минимальное 1  
+        </fieldset> 
+        <fieldset> <legend>Копки управления</legend>
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Сбросить">
+        <br>
+        <button type>
+            <br>
+            <img src="email.jpg">       
+        </button>
+        </fieldset> 
+    </form>
     </body>
+</html>
