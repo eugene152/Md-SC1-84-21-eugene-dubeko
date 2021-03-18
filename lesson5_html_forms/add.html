@@ -17,14 +17,14 @@
         "text": Только кирилица, без пробелов, длина поля 20, обязательное поле,"
         <br>
         <input type="text" name="patronymic" pattern="[А-Яа-яЁё]{1,24}" placeholder="Отчество" maxlength="20" required>
-        "text": Только кирилица, без пробелов, длина поля 20, обязательное поле,"
+        "text": Только кирилица, без пробелов, длина поля 20, обязательное поле,"</fieldset>
         <fieldset> <legend>Паспортные данные</legend>
         "text: Серия - только заглавные две латинские буквы с длинной 2 и максимальным количеством символов 2, оличесьтво букв не менее 2,<br>
         обязательное поле"<br>
         "text: Номер паспорта  - только две цифры с длиной 7 и максимальным количеством символов 7, количество цифр не менее 7, обязательное поле<br>
         <input type="text" name="serial"  pattern="[A-Z]{2}" placeholder="AA" maxlength="2"required>
         7<input type="text" name="series_number"  pattern="[0-9]{7}" placeholder="1234567" maxlength="7" required>
-        </fieldset>
+        
     
     <fieldset> <legend>Дата рождения</legend>
         <input type="text" name="year" pattern="[0-9]{4}" placeholder="2000">
@@ -54,8 +54,9 @@
         <option value="3">Укр</option>  
         </select>
         <fieldset> <legend>Интересы</legend>
+
         <fieldset> <legend>Хобби</legend>
-                <label>                                                                 <!--без id пока-->
+                <label>                                                                
                 <input type="checkbox" name="hobby[]"> Рыбалка
                 </label><br>
                 <label>
